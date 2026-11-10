@@ -14,9 +14,11 @@ import Users from './pages/Users';
 
 function Layout({ children }) {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex h-screen overflow-hidden">
       <Sidebar />
-      <main className="flex-1 p-6 lg:p-8 overflow-x-hidden">{children}</main>
+      <main className="flex-1 h-screen overflow-y-auto p-6 lg:p-8">
+        {children}
+      </main>
     </div>
   );
 }
